@@ -1,0 +1,164 @@
+Catálogo,Categoria,Item,Perguntas,Requisitos,Palavra-chave,OBS:,breadcrumb,
+Fiscal,Suporte e Atendimento,Análise de RECOPI (registro e controle das operações com papel imune),-Você está tentando fazer uma venda de papel Imune (RECOPI)?,"- Número do cliente no SAP
+- Relato do erro;
+- Anexo
+- Número da remessa
+- Número do lançamento no SAP","-RECOPI;
+- REMESSA;
+- PAPEL IMUNE;
+- Monitor RECOPI;",O que possibilita a consulta do documento ( vende de papel Imune) é a remessa;,,
+Fiscal,Operações Fiscais,Abertura de Filial," - Vai ser preciso abrir uma nova filial?
+"," - Data da inauguração;
+ - Anexo;
+ - Nome do responsável da Filial;
+ - Descrição"," - Abertura;
+ - Nova filial;
+ - Abertura de filial;",Abertura de uma nova filial,,
+Fiscal,Operações Fiscais,Alteração de endereço de Filial,- Será feita a alteração do endereço da filial?," - Nome do responsável da Filial
+ - Data da alteração
+ - CNPJ da Filial
+ - Novo endereço completo
+- Ajuste mandatório
+- Descrição
+- Anexo"," - Alteração
+ - Mudança de filial;
+ - Alteração de endereço de filial;",Alteração do endereço de uma filial já existente,,
+Fiscal,Operações Fiscais,Alteração de CNAE (classificação nacional de atividades econômicas),-Será preciso alterar o CNAE?," - CNPJ da Filial
+ - Inscrição Estadual da Filial 
+ - Endereço completo da Filial
+ - Nome do responsável da Filial
+ - Data da alteração
+ - Anexo
+ - Descrição da nova atividade (Atividade deve constar no contrato social)",Alteração de CNAE (classificação nacional de atividades econômicas),Alterar o CNAE da empresa,,
+Fiscal,Operações Fiscais,Baixa da Filial,É preciso que seja feita a baixa da filial?," - CNPJ da Filial
+ - Inscrição Estadual da Filial 
+ - Endereço completo da Filial
+ - Nome do responsável da Filial
+ - Data da baixa
+ - A filial possui imóvel cadastrado? (Sim; Não)
+ - A filial possui colaboradores prestando serviço? (Sim; Não)
+- Descrição
+- Anexo",Baixa de filial,A solicitação é aberta para baixa de filial,,
+Fiscal,Operações Fiscais,Abertura de nova Inscrição Estadual,É preciso a abertura de uma nova Inscrição estadual para a filial?," - CNPJ da Filial
+ - Endereço completo da Filial
+ - Nome do responsável da Filial
+- Anexo
+- Descrição"," - IE
+ - Inscrição Estadual
+ - Nova IE
+- Nova Inscrição Estadual
+",Abertura de uma Inscrição estadual para a filial,,
+Fiscal,Operações Fiscais,Atualização de dados societários,"-  É preciso atualizar os dados societários?
+ - É preciso alterar o QSA?
+ - É preciso alterar o Contador? 
+ - É preciso alterar o Capital?
+","-   Tipo de serviço (Alteração de QSA (Quadro societário Administrativo) - estadual e municipal; Alteração do contador; Alteração de capital)
+ - Data da alteração
+ - Anexo
+- Descrição"," - Atualização;
+ - Dados societários;
+ - QSA;
+- Quadro Societário Administrativo;
+ - Contador;
+ - Capital;
+",Solicitação de atualização de dados societários,,
+Fiscal,Operações Fiscais,Abertura de CEI (cadastro específico do INSS),É preciso abertura da CEI?," - Data de início da obra;
+ - Área em construção (m²)
+- Anexo
+- Descrição"," - CEI;
+ - INSS;
+ -Abertura de CEI ;
+
+",Abertura de CEI (cadastro específico do INSS),,
+Fiscal,Operações Fiscais,Fechamento de CEI (cadastro específico do INSS),É preciso fechamento da CEI?," - Data de encerramento da obra 
+ - Descrição
+-  Anexo"," - CEI;
+ - INSS;
+ -Encerramento de CEI ;
+
+",Encerramento de CEI (cadastro específico do INSS),,
+Fiscal,Operações Fiscais,Inclusão/manutenção de transportadora em benefício fiscal Suzano," - É preciso inclusão de transportadora em benefício fiscal da Suzano?
+ - É preciso manutenção de transportadora em benefício fiscal da Suzano?
+","- Tipo de serviço (Solicitação de Averbação; Alterações cadastrais)  
+- Razão Social da Transportadora 
+- CNPJ da Transportadora
+- Endereço da Transportadora
+ - Inscrição Estadual da Transportadora 
+ - Telefone de contato da Transportadora
+- Descrição
+-  Anexo","-Inclusão de transportadora ;
+-Manutenção de transportadora                       -Solicitação de Averbação;                                       -Alterações cadastrais;
+","-Solicitação de manutenção , inclusão , solicitação de Averbação, Alterações cadastrais",,
+Fiscal,Suporte e Atendimento,Análise de lançamento fiscal,- É preciso a análise de uma nota fiscal já lançada?,"- Descrição do  erro operacional
+- Número do lançamento no SAP
+- Tipo de operação (NF entrada; NF Saída)
+- Tipo de documento (Nfe; Cte; NFSe; RPS; Outros - especifique)
+- Anexo
+- Filial","-Lançada;
+- Nota fiscal;
+- Lançamento;
+",A análise é feita a partir de nota fiscal já lançada no sistema SAP,,
+Fiscal,Suporte e Atendimento,Conferência ISS Importação,- É preciso conferencia dos impostos de importação ?,"- Anexo
+- Descrição","-Importação;
+- ISS;
+- serviço;
+",É feita análise do excel ,,
+Fiscal,Suporte e Atendimento,Análise de Nota Fiscal para lançamento,"-A nota fiscal foi lançada?
+","- Tipo de operação (NF entrada; NF Saída)
+- Anexo
+- Descrição da dúvida","-nota fiscal;
+- material;
+- serviço;
+",A análise é feita a partir de nota fiscal não lançada ( é feita conferencia para prosseguir com o lançamento),,
+Fiscal,Suporte e Atendimento,Análise e preenchimento de recibo de pessoa física (RPS/RPA),"-É preciso análise do RPS?
+- É preciso análise do RPA?
+-É preciso preenchimento do RPS?
+- É preciso preenchimento do RPA?
+","- Número do Fornecedor no SAP;
+- Filial;
+- Condição do valor (Bruto; Líquido);
+- Valor a ser pago para o fornecedor;
+- Anexo;
+- Descrição;","-RPS;
+- RPA;
+- serviço;
+-preenchimento;
+-conferência;
+-análise;",é feita a conferencia/ preenchimento do RPS/RPA (excel anexo),,
+Fiscal,Operações Fiscais,Análise de utilização  de crédito de imposto para operação de venda de produto,- É preciso que seja feita a análise de utilização de crédito de imposto para operação de venda de produto?,"- Anexo
+- Descrição","- Análise;
+- Utilização;
+- Crédito;
+- Imposto;
+- Venda;",Análise de utilização  de crédito de imposto para operação de venda de produto,,
+Fiscal,Operações Fiscais,Solicitação de Credenciamento ou Recredenciamento de filiais para benefício fiscal,serviço não consta no portal,"- Descrição
+- Anexo",2,Alterar letras maiúsculas para minúsculas. Manter maiúsculas apenas a primeira letra da frase e siglas.,,
+Fiscal,Suporte e Atendimento,análise de processamento de NF,"-É preciso que a nota fiscal seja aprovada?
+- A nota fiscal está travada?
+-A nota fiscal está com erro?
+- A nota fiscal foi recusada?
+","- Tipo de operação (Aprovação de NF, Reimpressão de NF, Recusa de NF, Status de NF)
+'- Número do Lançamento no SAP
+- Descrição
+- Anexo","-nota travada;
+- nota em processamento;
+- nota fiscal recusada;
+-nota fiscal com erro;
+-nota não emitida;
+",o campo é utilizado para analisar as notas fiscais que não foram completamente processadas e emitidas ( estão com erro ou problemas para emissão),,
+Fiscal,Suporte e Atendimento,análise de XML para lançamento,"-É preciso que o XML seja cadastrado na ZNFE17 para lançamento na ZNFE18?
+- O arquivo está com erro?
+-O XML está integrando no GRC?
+- o XML foi enviado para os e-mails nfe@suzano.com.br ou cte@suzano.com.br?
+","- Anexo
+- descrição","-XML;
+- ZNFE17;
+- ZNFE18;
+-lançamento;
+
+","-O XML pode ser cadastrado na ZNFE17 para lançamento na ZNFE18;                                -O erro para entrada do XML no sistema pode estar relacionado com o não no e-mail para integração
+",,
+Fiscal,Suporte e Atendimento,Extração de dados fiscais,-Quais documentos são necessários? ;                                                - A documentação é referente a alguma filial? Ou estado/ municipio em especifico?,"-  Descrição
+- Anexo",-Informação de documentação necessária;                                              -Extração de dados fiscais,o campo é utilizado para que seja enviado relação de documentos/ relatórios referente a uma filial em específico ou municipio/ estado,,
+Fiscal,Operações Fiscais,Cadastro tabela de excessão - ZNFE17,serviço não consta no portal,XML,2,,,
+Fiscal,Operações Fiscais,Limpar caixa de XML,serviço não consta no portal,- descrição,1,,,
