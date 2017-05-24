@@ -13,7 +13,7 @@ namespace suzanobot.Model
         public string Item { get; set; }
         public string Pergunta { get; set; }
         public string Requisitos { get; set; }
-        public string Keyword { get; set; }
+        public string Keywords { get; set; }
         public string Observacao { get; set; }
         public string Breadcrumb { get; set; }
 

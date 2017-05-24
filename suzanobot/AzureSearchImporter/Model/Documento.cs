@@ -1,9 +1,6 @@
 ﻿using Microsoft.Azure.Search;
 using Microsoft.Azure.Search.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using Newtonsoft.Json;
 
 namespace AzureSearchImporter
 {
@@ -24,7 +21,8 @@ namespace AzureSearchImporter
         public string Requisitos { get; set; }
 
         [IsSearchable]
-        public string Keyword { get; set; }
+        [JsonProperty("keywords")]
+        public string Keywords { get; set; }
 
         [IsFilterable]
         public string Observacao { get; set; }
