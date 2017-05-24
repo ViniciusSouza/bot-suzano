@@ -44,8 +44,6 @@ namespace suzanobot.Dialogs
             var reply = context.MakeMessage();
             UriBuilder uri = Utils.Utils.GetPlaceHoldImg(56, 640, 330, "Suzano CSC bot");
 
-
-
             reply.AddHeroCard(
                 "Olá vou te ajudar a encontrar documentos para os seguintes assuntos",
                 "Se está com problema em algo diferente, clique em outros e digite a sua pergunta",
