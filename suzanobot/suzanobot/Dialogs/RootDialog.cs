@@ -78,6 +78,15 @@ namespace suzanobot.Dialogs
 
 			}
 
+            //Outros
+            if (message.Text == this.options[2])
+            {
+                //text = "Você clicou em Documento fiscal";
+                var atendimentoDialog = new OutrosDialog();
+                context.Call(atendimentoDialog, OutrosReplayMessage);
+
+            }
+
             var reply = context.MakeMessage();
             reply.Text = HttpUtility.HtmlDecode(text);
             await context.PostAsync(reply);
@@ -94,5 +103,9 @@ namespace suzanobot.Dialogs
 		{
 			context.Done(string.Empty);
 		}
-	}
+        private async Task OutrosReplayMessage(IDialogContext context, IAwaitable<object> result)
+        {
+            context.Done(string.Empty);
+        }
+    }
 }

@@ -113,6 +113,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Dialogs\AtendimentoDialog.cs" />
+    <Compile Include="Dialogs\OutrosDialog.cs" />
     <Compile Include="Dialogs\NotaFiscalDialog.cs" />
     <Compile Include="Dialogs\RootDialog.cs" />
     <Compile Include="Extensions\HeroCardExtensions.cs" />
