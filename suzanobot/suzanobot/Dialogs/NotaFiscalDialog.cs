@@ -46,6 +46,7 @@ namespace suzanobot.Dialogs
 
 		public async Task StartAsync(IDialogContext context)
         {
+            string message = "Abaixo, você encontra as principais situações relacionadas à notas fiscais:";
 
 			//string message = "Qual o status da sua nota fical?";
 			string message = "Qual o procedimento desejado?";
