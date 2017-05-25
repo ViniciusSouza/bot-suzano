@@ -4,6 +4,7 @@ using suzanobot.Extensions;
 using System;
 using System.Threading.Tasks;
 using System.Web;
+using suzanobot.Utils;
 
 namespace suzanobot.Dialogs
 {
@@ -11,14 +12,7 @@ namespace suzanobot.Dialogs
     public class RootDialog : IDialog<object>
     {
         private ResumptionCookie resumptionCookie;
-
-        private string[] options = new[]
-            {
-                "Suporte a assuntos relacionados a Nota Fiscal",
-                "Atendimentos auditorias, fiscalizações ",
-                "Outros documentos e processos"
-            };
-
+		
         public Task StartAsync(IDialogContext context)
         {
             context.Wait(MessageReceivedAsync);
@@ -47,7 +41,7 @@ namespace suzanobot.Dialogs
             reply.AddHeroCard(
                 "Olá vou te ajudar a encontrar documentos para os seguintes assuntos",
                 "Se está com problema em algo diferente, clique em outros e digite a sua pergunta",
-                options,
+                Options.initialOptions,
                 new[] { uri.ToString() }
                 );
 

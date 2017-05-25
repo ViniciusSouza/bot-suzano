@@ -8,9 +8,14 @@ namespace suzanobot.Utils
 	public class Options
 	{
 		//===============================================
+		//NOME BOT
+		//===============================================
+		public static string nomeBot = "Suzano CSC bot";
+
+		//===============================================
 		//OPÇÕES INICIAIS
 		//===============================================
-		private string[] initialOptions = new[]
+		public static string[] initialOptions = new[]
 		{
 			"Suporte a assuntos relacionados a Nota Fiscal",
 			"Atendimentos auditorias, fiscalizações etc",
@@ -20,14 +25,14 @@ namespace suzanobot.Utils
 		//===============================================
 		//OPÇÕES REFERENTES A NOTA FISCAL
 		//===============================================
-		private string[] optionsNotaFiscal = new[]
+		public static string[] optionsNotaFiscal = new[]
 		{
 			"Solicitação de pagamento e duvidas",
 			"Nota travada SAP",
 			"Cancelamento de nota fiscal"
 		};
 
-		private string[] optionsSolicitacaoPagamentoNF = new[]
+		public static string[] optionsSolicitacaoPagamentoNF = new[]
 		{
 			"Tributação",
 			"Alíquota",
