@@ -67,7 +67,7 @@ namespace suzanobot.Extensions
         }
 
 
-        private static HeroCard GenerateReturnHeroCard(string title, string subtitle, string requisitos, string observacao, string caminho)
+        public static HeroCard GenerateReturnHeroCard(string title, string subtitle, string requisitos, string observacao, string caminho)
         {
             var actions = new List<CardAction>();
 

@@ -132,6 +132,8 @@
     </Compile>
     <Compile Include="Model\Documento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AzureSearchClient.cs" />
+    <Compile Include="Services\IMapper.cs" />
     <Compile Include="Utils\Options.cs" />
     <Compile Include="Utils\Utils.cs" />
   </ItemGroup>
@@ -146,20 +148,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\BotBuilder-Samples\CSharp\demo-Search\Search.Azure\Search.Azure.csproj">
-      <Project>{2734b7aa-2144-41a8-9423-225a544438b8}</Project>
-      <Name>Search.Azure</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\BotBuilder-Samples\CSharp\demo-Search\Search.Contracts\Search.Contracts.csproj">
-      <Project>{ff10cd6a-2be1-4520-a01f-769c396906cb}</Project>
-      <Name>Search.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\BotBuilder-Samples\CSharp\demo-Search\Search.Dialogs\Search.Dialogs.csproj">
-      <Project>{c3583b53-4097-44d5-8537-2a8354b32654}</Project>
-      <Name>Search.Dialogs</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -6,6 +6,8 @@ using System.Web;
 using System.Threading.Tasks;
 using Microsoft.Bot.Connector;
 using suzanobot.Utils;
+using suzanobot.Services;
+using suzanobot.Model;
 
 namespace suzanobot.Dialogs
 {
@@ -87,12 +89,18 @@ namespace suzanobot.Dialogs
 
         private async Task ResumeItemAnswer(IDialogContext context, IAwaitable<string> result)
         {
+            AzureSearchClient searchClient = new AzureSearchClient();
 
             //Busca o documento no Azure Search
-
+            var itemSeaarchDialog = new ItemSearchDialog(searchClient);
+            context.Call(itemSeaarchDialog, OutrosReplayMessage);
             context.Done(await result);
 
         }
 
+        private Task OutrosReplayMessage(IDialogContext context, IAwaitable<object> result)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

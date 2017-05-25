@@ -1,27 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using Microsoft.Bot.Builder.Dialogs;
-using Search.Dialogs;
-using Search.Services;
+using suzanobot.Services;
 
 namespace suzanobot.Dialogs
 {
     [Serializable]
-    public class ItemSearchDialog : SearchDialog
+    public class ItemSearchDialog : IDialog
     {
 
-        private static readonly string[] TopRefiners = { "refiner1", "refiner2", "refiner3" }; // define your own custom refiners 
+        private AzureSearchClient clientSearch;
 
-        public ItemSearchDialog(ISearchClient searchClient) : base(searchClient, multipleSelection: true)
-    {
-        }
+        private static readonly string[] TopRefiners = { "keyword" }; // define your own custom refiners 
 
-        protected override string[] GetTopRefiners()
+        public ItemSearchDialog(AzureSearchClient _clientSearch)
         {
-            return TopRefiners;
+            clientSearch = _clientSearch;
         }
+
+        public Task StartAsync(IDialogContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        //protected override string[] GetTopRefiners()
+        //{
+        //    return TopRefiners;
+        //}
 
     }
 }
