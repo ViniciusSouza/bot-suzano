@@ -132,6 +132,8 @@
     </Compile>
     <Compile Include="Model\Documento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AzureSearchClient.cs" />
+    <Compile Include="Services\IMapper.cs" />
     <Compile Include="Utils\Options.cs" />
     <Compile Include="Utils\Utils.cs" />
   </ItemGroup>

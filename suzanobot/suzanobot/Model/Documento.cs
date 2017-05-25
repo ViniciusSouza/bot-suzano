@@ -8,6 +8,14 @@ namespace suzanobot.Model
     [Serializable]
     public class Documento
     {
+
+        public Documento()
+        {
+            this.PropertyBag = new Dictionary<string, object>();
+        }
+
+        public IDictionary<string, object> PropertyBag { get; set; }
+
         public string ID { get; set; }
         public string Categoria { get; set; }
         public string Item { get; set; }

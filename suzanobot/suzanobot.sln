@@ -7,12 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "suzanobot", "suzanobot\suza
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureSearchImporter", "AzureSearchImporter\AzureSearchImporter.csproj", "{454BF8C2-1115-441C-8715-DFB23775D6C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Azure", "..\..\BotBuilder-Samples\CSharp\demo-Search\Search.Azure\Search.Azure.csproj", "{2734B7AA-2144-41A8-9423-225A544438B8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Contracts", "..\..\BotBuilder-Samples\CSharp\demo-Search\Search.Contracts\Search.Contracts.csproj", "{FF10CD6A-2BE1-4520-A01F-769C396906CB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Search.Dialogs", "..\..\BotBuilder-Samples\CSharp\demo-Search\Search.Dialogs\Search.Dialogs.csproj", "{C3583B53-4097-44D5-8537-2A8354B32654}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,18 +21,6 @@ Global
 		{454BF8C2-1115-441C-8715-DFB23775D6C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{454BF8C2-1115-441C-8715-DFB23775D6C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{454BF8C2-1115-441C-8715-DFB23775D6C8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2734B7AA-2144-41A8-9423-225A544438B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2734B7AA-2144-41A8-9423-225A544438B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2734B7AA-2144-41A8-9423-225A544438B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2734B7AA-2144-41A8-9423-225A544438B8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FF10CD6A-2BE1-4520-A01F-769C396906CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF10CD6A-2BE1-4520-A01F-769C396906CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF10CD6A-2BE1-4520-A01F-769C396906CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF10CD6A-2BE1-4520-A01F-769C396906CB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C3583B53-4097-44D5-8537-2A8354B32654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3583B53-4097-44D5-8537-2A8354B32654}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C3583B53-4097-44D5-8537-2A8354B32654}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C3583B53-4097-44D5-8537-2A8354B32654}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
