@@ -97,5 +97,27 @@ namespace suzanobot.Utils
 			"Notas fiscais emitidas pela Suzano",
 			"Recibo de entrega de obrigação"
 		};
+
+
+		//===============================================
+		//OPÇÕES REFERENTES A ATENDIMENTOS, AUDITORIA, FISCALIZAÇÃO
+		//===============================================
+		/// <summary>
+		///0 = Alvará; 
+		///1 = Certidão de pendências financeiras da Suzano; 
+		///2 = Certidão negativa de débito; 
+		///3 = Comprovante de recolhimento; 
+		///4 = Notas fiscais emitidas pela Suzano; 
+		///5 = Recibo de entrega de obrigação; 
+		/// </summary>
+		public static string[] optionsOutros = new[]
+		{
+			"Solicitação de informações",
+			"Cadastro de Cliente/Fornecedor",
+			"Solicitação de Procuração",
+			"Autorização para Documentos Fiscais – AIDF",
+			"Informe de Rendimentos Prestador de Serviços",
+			"Documentos Processos Digitais"
+		};
 	}
 }
