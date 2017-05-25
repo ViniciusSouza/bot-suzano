@@ -78,9 +78,9 @@ namespace suzanobot.Dialogs
 
 			}
 
-            var reply = context.MakeMessage();
-            reply.Text = HttpUtility.HtmlDecode(text);
-            await context.PostAsync(reply);
+            //var reply = context.MakeMessage();
+            //reply.Text = HttpUtility.HtmlDecode(text);
+            //await context.PostAsync(reply);
         }
 
 

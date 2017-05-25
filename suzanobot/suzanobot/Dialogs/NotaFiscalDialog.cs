@@ -8,13 +8,13 @@ using Microsoft.Bot.Connector;
 
 namespace suzanobot.Dialogs
 {
-    [Serializable]
-    public class NotaFiscalDialog : IDialog
-    {
+	[Serializable]
+	public class NotaFiscalDialog : IDialog
+	{
 		private string[] optionsRecopi = new[]
 			{
 				"Sem Recopi",
-				"Com Recopi"			
+				"Com Recopi"
 			};
 
 		private string[] optionsSuporteFornecedor = new[]
@@ -44,22 +44,33 @@ namespace suzanobot.Dialogs
 				"Informações necessárias para pagamento",
 			};
 
-		public async Task StartAsync(IDialogContext context)
-        {
-            string message = "Abaixo, você encontra as principais situações relacionadas à notas fiscais:";
+		private string[] optionsNotasFiscais = new[]
+		{
+			"Recopi",
+			"Suporte ao Fornecedor",
+			"Nota travada SAP",
+			"Cancelamento",
+			"Recebimento de NF",
+			"Emissão de guias antecipadas",
+			"Emissão de Carta de Correção (CC-e)",
+			"Emissão NF",
+			"Emissão NF Complementar"
+		};
 
-			
-			//PromptDialog.Choice(context, ResumeAfterAnswer, new[] { "Não Lançada", "Lançada", "Em Processamento", "Não Sei" }, message);
-			PromptDialog.Choice(context, ResumeAfterAnswer, new[] { "Recopi", "Suporte ao Fornecedor", "Nota travada SAP", "Cancelamento", "Recebimento de NF", "Emissão de guias antecipadas", "Emissão de Carta de Correção (CC-e)", "Emissão NF", "Emissão NF Complementar" }, message);
+		public async Task StartAsync(IDialogContext context)
+		{
+			string message = "Abaixo, você encontra as principais situações relacionadas à notas fiscais:";
+						
+			PromptDialog.Choice(context, ResumeAfterAnswer, optionsNotasFiscais, message);
 		}
 
 		private async Task ResumeAfterAnswer(IDialogContext context, IAwaitable<string> result)
-        {
-            var message = context.MakeMessage();
+		{
+			var message = context.MakeMessage();
 			//await context.PostAsync(message);
 
 			switch (await result)
-            {
+			{
 				case "Recopi":
 					//message.Text = string.Format("## Opção de nota fical **Não Lançada** \n\n Acesse o link [Catalago Fiscal](https://suzanoprod.service-now.com/csc/csc_catalogo_fiscal.do)");
 					message.AddHeroCard("Escolha o processo", optionsRecopi);
@@ -108,8 +119,8 @@ namespace suzanobot.Dialogs
 			}
 			//await context.PostAsync(message);
 
-            //context.Done(await result);
-        }
+			//context.Done(await result);
+		}
 
 		private async Task OnOptionSelectedRecopi(IDialogContext context, IAwaitable<IMessageActivity> result)
 		{
@@ -253,7 +264,8 @@ namespace suzanobot.Dialogs
 			var reply = context.MakeMessage();
 			reply.Text = HttpUtility.HtmlDecode(text);
 			await context.PostAsync(reply);
+			context.Done(string.Empty);
 		}
-		
+
 	}
 }
