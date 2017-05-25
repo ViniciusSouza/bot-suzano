@@ -14,9 +14,9 @@ namespace suzanobot.Dialogs
 
         private string[] options = new[]
             {
-                "Nota Fiscal",
-                "Documento Fiscal",
-                "Outros"
+                "Suporte a assuntos relacionados a Nota Fiscal",
+                "Atendimentos auditorias, fiscalizações ",
+                "Outros documentos e processos"
             };
 
         public Task StartAsync(IDialogContext context)

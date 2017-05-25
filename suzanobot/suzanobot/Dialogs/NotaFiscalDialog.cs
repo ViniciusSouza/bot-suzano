@@ -14,7 +14,7 @@ namespace suzanobot.Dialogs
         {
             string message = "Qual o status da sua nota fical?";
 
-            PromptDialog.Choice(context, ResumeAfterAnswer, new[] { "Não Lançada", "Lançada", "Em Proocessamento", "Não Sei" }, message);
+            PromptDialog.Choice(context, ResumeAfterAnswer, new[] { "Não Lançada", "Lançada", "Em Processamento", "Não Sei" }, message);
         }
 
         private async Task ResumeAfterAnswer(IDialogContext context, IAwaitable<string> result)
