@@ -13,4 +13,10 @@
     <PackageReference Include="Microsoft.Azure.Search" Version="3.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="System.Configuration">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\System.Configuration.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
