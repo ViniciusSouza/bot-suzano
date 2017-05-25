@@ -100,15 +100,15 @@ namespace suzanobot.Utils
 
 
 		//===============================================
-		//OPÇÕES REFERENTES A ATENDIMENTOS, AUDITORIA, FISCALIZAÇÃO
+		//OPÇÕES REFERENTES A OUTROS
 		//===============================================
 		/// <summary>
-		///0 = Alvará; 
-		///1 = Certidão de pendências financeiras da Suzano; 
-		///2 = Certidão negativa de débito; 
-		///3 = Comprovante de recolhimento; 
-		///4 = Notas fiscais emitidas pela Suzano; 
-		///5 = Recibo de entrega de obrigação; 
+		///0 = Solicitação de informações; 
+		///1 = Cadastro de Cliente/Fornecedor; 
+		///2 = Solicitação de Procuração; 
+		///3 = Autorização para Documentos Fiscais – AIDF; 
+		///4 = Informe de Rendimentos Prestador de Serviços; 
+		///5 = Documentos Processos Digitais; 
 		/// </summary>
 		public static string[] optionsOutros = new[]
 		{
