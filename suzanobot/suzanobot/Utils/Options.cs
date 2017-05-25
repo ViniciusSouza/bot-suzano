@@ -7,6 +7,7 @@ namespace suzanobot.Utils
 {
 	public class Options
 	{
+
 		//===============================================
 		//NOME BOT
 		//===============================================
@@ -57,6 +58,19 @@ namespace suzanobot.Utils
 			"Emissão NF Importação"
 		};
 
+		public static string[] optionsTravadaSAPNF = new[]
+		{
+			"Aprocação de Nota Fiscal",
+			"Recusa de Nota Fiscal",
+			"Com recopi",
+			"Reimpressão de Nota Fiscal"
+		};
+
+		public static string[] optionsCancelamentoNF = new[]
+		{
+			"Emissão superior a 24 horas",
+			"Emissão inferior a 24 horas"
+		};
 
 		//===============================================
 		//DESCRIÇÃO ATENDIMENTOS, AUDITORIAS, FISCALIZAÇÕES
