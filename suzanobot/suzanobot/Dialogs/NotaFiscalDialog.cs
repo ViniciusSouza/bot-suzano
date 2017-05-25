@@ -48,8 +48,7 @@ namespace suzanobot.Dialogs
         {
             string message = "Abaixo, você encontra as principais situações relacionadas à notas fiscais:";
 
-			//string message = "Qual o status da sua nota fical?";
-			string message = "Qual o procedimento desejado?";
+			
 			//PromptDialog.Choice(context, ResumeAfterAnswer, new[] { "Não Lançada", "Lançada", "Em Processamento", "Não Sei" }, message);
 			PromptDialog.Choice(context, ResumeAfterAnswer, new[] { "Recopi", "Suporte ao Fornecedor", "Nota travada SAP", "Cancelamento", "Recebimento de NF", "Emissão de guias antecipadas", "Emissão de Carta de Correção (CC-e)", "Emissão NF", "Emissão NF Complementar" }, message);
 		}

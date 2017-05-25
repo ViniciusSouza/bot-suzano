@@ -22,7 +22,7 @@ namespace AzureSearchImporter
 
             string searchServiceName = "search-suzano-bot";
 
-            string apiKey = "";
+            string apiKey = "380FF6176DF4212E336643BA3F23CE4A";
 
             bool DeleteToCreate = false;
 
