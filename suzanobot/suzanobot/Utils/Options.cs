@@ -40,8 +40,22 @@ namespace suzanobot.Utils
 			"Informações para solicitação de pagamento",
 			"Emissão NF Complementar",
 			"Emissão NF Importação",
-			"",
-			""
+            "Emissão de guias antecipadas"
 		};
-	}
+
+        public static string[] optionsTravadaSAPNF = new[]
+        {
+            "Aprocação de Nota Fiscal",
+            "Recusa de Nota Fiscal",
+            "Com recopi",
+            "Reimpressão de Nota Fiscal"
+        };
+
+        public static string[] optionsCancelamentoNF = new[]
+        {
+            "Emissão superior a 24 horas",
+            "Emissão inferior a 24 horas"
+        };
+
+    }
 }

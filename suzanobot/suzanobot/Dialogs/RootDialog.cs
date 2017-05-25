@@ -56,7 +56,7 @@ namespace suzanobot.Dialogs
             var text = "";
 
             //Nota Fiscal
-            if (message.Text == this.options[0])
+            if (message.Text == Options.initialOptions[0])
             {
                 var ntDialog = new NotaFiscalDialog();
                 //text = "Você clicou em Nota fical";
@@ -64,7 +64,7 @@ namespace suzanobot.Dialogs
             }
 
             //Documento Fiscal
-            if (message.Text == this.options[1])
+            if (message.Text == Options.initialOptions[1])
             {
 				//text = "Você clicou em Documento fiscal";
 				var atendimentoDialog = new AtendimentoDialog();
@@ -73,7 +73,7 @@ namespace suzanobot.Dialogs
 			}
 
             //Outros
-            if (message.Text == this.options[2])
+            if (message.Text == Options.initialOptions[2])
             {
                 //text = "Você clicou em Documento fiscal";
                 var atendimentoDialog = new OutrosDialog();

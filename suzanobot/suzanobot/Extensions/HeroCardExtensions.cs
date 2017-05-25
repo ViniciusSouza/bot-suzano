@@ -65,5 +65,18 @@ namespace suzanobot.Extensions
         {
             return GenerateHeroCard(title, subtitle, options.Select(option => new KeyValuePair<string, string>(option.ToString(), option.ToString())), images);
         }
+
+
+        private static HeroCard GenerateReturnHeroCard(string title, string subtitle, string requisitos, string observacao, string caminho)
+        {
+            var actions = new List<CardAction>();
+
+            string text = "";
+            text = text + string.Format("**Requisitos:** {0}", requisitos.Replace(";","\r\n"));
+            text = text + string.Format("**Observação:** {0}", observacao);
+            text = text + string.Format("**Caminho no CSC:** {0}", caminho);
+
+            return new HeroCard(title, subtitle, text);
+        }
     }
 }
