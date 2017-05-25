@@ -15,7 +15,7 @@ namespace suzanobot.Dialogs
         private string[] options = new[]
             {
                 "Nota Fiscal",
-                "Documento Fiscal",
+                "Atendimentos, Auditorias e Fiscalizações",
                 "Outros"
             };
 
@@ -72,17 +72,27 @@ namespace suzanobot.Dialogs
             //Documento Fiscal
             if (message.Text == this.options[1])
             {
-                text = "Você clicou em Documento fiscal";
-            }
+				//text = "Você clicou em Documento fiscal";
+				var atendimentoDialog = new AtendimentoDialog();
+				context.Call(atendimentoDialog, AtendimentoReplayMessage);
+
+			}
 
             var reply = context.MakeMessage();
             reply.Text = HttpUtility.HtmlDecode(text);
             await context.PostAsync(reply);
         }
 
-        private async Task NotaFiscalReplayMessage(IDialogContext context, IAwaitable<object> result)
-        {
-            context.Done(string.Empty);
-        }
-    }
+
+
+		private async Task NotaFiscalReplayMessage(IDialogContext context, IAwaitable<object> result)
+		{
+			context.Done(string.Empty);
+		}
+
+		private async Task AtendimentoReplayMessage(IDialogContext context, IAwaitable<object> result)
+		{
+			context.Done(string.Empty);
+		}
+	}
 }
