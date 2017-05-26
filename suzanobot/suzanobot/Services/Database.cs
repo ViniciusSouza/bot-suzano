@@ -15,7 +15,10 @@ namespace suzanobot.Services
 
         public static void LoadJson()
         {
-            StreamReader file = File.OpenText(@"C:\Users\visouza\Repos\suzano-bot\suzanobot\suzanobot\Data\documentos.json");
+            var path = HttpContext.Current.Server.MapPath("/");
+            var jsonfile = Path.Combine(path, @"Data\documentos.json");
+
+            StreamReader file = File.OpenText(jsonfile);
             var lista = (JArray)JArray.Parse(file.ReadToEnd());
             documentos = new List<Documento>();
 
