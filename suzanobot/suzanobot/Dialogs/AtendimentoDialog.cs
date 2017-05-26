@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
 using suzanobot.Utils;
+using suzanobot.Services;
 
 namespace suzanobot.Dialogs
 {
@@ -16,31 +17,32 @@ namespace suzanobot.Dialogs
 		public async Task StartAsync(IDialogContext context)
 		{
 			string descricao = Options.descricaoOpcaoAtendimento;
-			PromptDialog.Choice(context, ResumeAfterAnswer, Options.optionsAtendimento, descricao);
+			PromptDialog.Choice(context, ResumeAfterAnswer, Options.optionsSolicitacaoDocumentos, descricao);
 		}
 
 		private async Task ResumeAfterAnswer(IDialogContext context, IAwaitable<string> result)
 		{
-			var message = await result;
-			string textRetorno = "Você selecionou a opção " + message;
-
-			//if (message == Options.optionsAtendimento[0])
-			//{ }
-			//else if (message == Options.optionsAtendimento[1])
-			//{ }
-			//else if (message == Options.optionsAtendimento[2])
-			//{ }
-			//else if (message == Options.optionsAtendimento[3])
-			//{ }
-			//else if (message == Options.optionsAtendimento[4])
-			//{ }
-			//else if (message == Options.optionsAtendimento[5])
-			//{ }
-
+			var escolha = await result;
+			string text = string.Format("Você escolheu **{0}**.", escolha);
 			var reply = context.MakeMessage();
-			reply.Text = HttpUtility.HtmlDecode(textRetorno);
+			reply.Text = HttpUtility.HtmlDecode(text);
 			await context.PostAsync(reply);
 			context.Done(string.Empty);
+		}
+
+		private async Task ResumeItemAnswer(IDialogContext context, IAwaitable<string> result)
+		{
+			AzureSearchClient searchClient = new AzureSearchClient();
+
+			//Busca o documento no Azure Search
+			var itemSeaarchDialog = new ItemSearchDialog(searchClient);
+			context.Call(itemSeaarchDialog, OutrosReplayMessage);
+			context.Done(await result);
+		}
+
+		private Task OutrosReplayMessage(IDialogContext context, IAwaitable<object> result)
+		{
+			throw new NotImplementedException();
 		}
 	}
 }
