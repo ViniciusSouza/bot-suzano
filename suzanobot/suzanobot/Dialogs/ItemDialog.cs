@@ -71,15 +71,15 @@ namespace suzanobot.Dialogs
 				reply.Type = ActivityTypes.Message;
 				reply.TextFormat = "markdown";
 
-				//var herocard = HeroCardExtensions.AddHeroCard(documento.Frente, documento.Categoria, documento.Requisitos, documento.Observacao, documento.Breadcrumb);
-				//reply.Attachments.Add(herocard.ToAttachment());
+                //var herocard = HeroCardExtensions.AddHeroCard(documento.Frente, documento.Categoria, documento.Requisitos, documento.Observacao, documento.Breadcrumb);
+                //reply.Attachments.Add(herocard.ToAttachment());
 
-				string text = "";
-				text = text + string.Format("## {0} ## <br />", documento.Frente);
-				text = text + string.Format("### {0} ### <br />", documento.Categoria);
-				text = text + string.Format("**Requisitos:** {0} <br />", documento.Requisitos.Replace(";", "<br />"));
-				text = text + string.Format("**Observação:** {0} <br />", documento.Observacao);
-				text = text + string.Format("**Caminho no CSC:** {0} <br />", documento.Breadcrumb);
+                string text = "";
+                text = text + string.Format("## {0} ## <br />", documento.Frente);
+                text = text + string.Format("### {0} ### <br />", documento.Categoria);
+                text = text + string.Format("**Requisitos:** {0} <br /><br />", documento.Requisitos.Replace(";", "<br />"));
+                text = text + string.Format("**Observação:** {0} <br />", documento.Observacao);
+                text = text + string.Format("**Caminho no CSC:** {0} <br />", documento.Breadcrumb);
 
 				reply.Text = text;
 
