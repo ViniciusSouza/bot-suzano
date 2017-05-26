@@ -143,6 +143,7 @@
     </Content>
     <Content Include="appsetings.json" />
     <Content Include="Data\documentos.json" />
+    <None Include="Properties\PublishProfiles\suzanobot20170526100722 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\visouzavorlon - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
