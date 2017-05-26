@@ -7,11 +7,10 @@ namespace suzanobot.Utils
 {
 	public class Options
 	{
-
 		//===============================================
 		//NOME BOT
 		//===============================================
-		public static string nomeBot = "Suzano CSC bot";
+		public static string nomeBot = "Suzan bot";
 
 		//===============================================
 		//TITULO OPÇÕES INICIAIS
@@ -23,97 +22,14 @@ namespace suzanobot.Utils
 		//===============================================
 		public static string descricaoOpcaoInicial = "Se tiver um problema diferente, clique em 'Outros' e digite sua pergunta.";
 
-		//===============================================
-		//OPÇÕES INICIAIS
-		//===============================================
-		/// <summary>
-		///0 = Suporte a assuntos relacionados a Nota Fiscal; 
-		///1 = Atendimentos auditorias, fiscalizações etc; 
-		///2 = Outros; 
-		/// </summary>
-		public static string[] initialOptions = new[]
-		{
-			"Suporte a assuntos relacionados a Nota Fiscal",
-			"Atendimentos, auditorias, fiscalizações etc",
-			"Outros"
-		};
+		public static string mensagemNaoExisteBancoFrentes = "Não existem frentes no banco de dados. Contate o administrador do bot.";
 
-		//===============================================
-		//OPÇÕES REFERENTES A NOTA FISCAL
-		//===============================================
-		public static string[] optionsNotaFiscal = new[]
-		{
-			"Solicitação de pagamento e duvidas",
-			"Nota travada SAP",
-			"Cancelamento de nota fiscal"
-		};
+		public static string mensagemConversaCompletada = "Obrigado por utilizar o Suzan bot! Espero ter ajudado. <br />Caso tenha mais alguma dúvida, pode me chamar novamente.";
 
-		public static string[] optionsDuvidaNF = new[]
-		{
-			"Tributação",
-			"Alíquota",
-			"Ajuste cadastro cliente/fornecedor",
-			"Informações para solicitação de pagamento",
-			"Emissão NF Complementar",
-			"Emissão NF Importação",
-            "Emissão de guias antecipadas"
-		};
+		public static string mensagemConversaNaoCompletada = "Sinto não poder te ajudar :/ . Ainda bem que conto com um time muito bom, disponível através do número/contato";
 
-		public static string[] optionsTravadaSAPNF = new[]
-		{
-			"Aprocação de Nota Fiscal",
-			"Recusa de Nota Fiscal",
-			"Com recopi",
-			"Reimpressão de Nota Fiscal"
-		};
+		public static string mensagemEscolhaCategoria = "Selecione a categoria referente ao tópico '{0}'.";
 
-		public static string[] optionsCancelamentoNF = new[]
-		{
-			"Emissão superior a 24 horas",
-			"Emissão inferior a 24 horas"
-		};
-
-		//===============================================
-		//DESCRIÇÃO ATENDIMENTOS, AUDITORIAS, FISCALIZAÇÕES
-		//===============================================
-		public static string descricaoOpcaoAtendimento = "Solicitação de documentos:";
-
-		//===============================================
-		//OPÇÕES REFERENTES A ATENDIMENTOS, AUDITORIA, FISCALIZAÇÃO
-		//===============================================
-		/// <summary>
-		///0 = Certidão negativa de débito; 
-		///1 = Comprovante de recolhimento de impostos; 
-		///2 = Recibo de entrega de obrigação; 
-		///3 = Notas fiscais emitidas pela Suzano; 
-		/// </summary>
-		public static string[] optionsSolicitacaoDocumentos = new[]
-		{
-			"Certidão negativa de débito",
-			"Comprovante de recolhimento de impostos",
-			"Recibo de entrega de obrigação",
-			"Notas fiscais emitidas pela Suzano"
-		};
-
-		//===============================================
-		//OPÇÕES REFERENTES A OUTROS
-		//===============================================
-		/// <summary>
-		///0 = Solicitação de informações; 
-		///1 = Cadastro de Cliente/Fornecedor; 
-		///2 = Solicitação de Procuração; 
-		///3 = Autorização para Documentos Fiscais – AIDF; 
-		///4 = Informe de Rendimentos Prestador de Serviços; 
-		///5 = Documentos Processos Digitais; 
-		/// </summary>
-		public static string[] optionsOutros = new[]
-		{
-			"Solicitação de informações",
-			"Cadastro de Cliente/Fornecedor",
-			"Solicitação de Procuração",
-			"Autorização para Documentos Fiscais – AIDF",
-			"Informe de Rendimentos Prestador de Serviços",
-			"Documentos Processos Digitais"
-		};
+		public static string mensagemEscolhaItem = "Selecione o item referente a categoria '{0}'.";
 	}
 }

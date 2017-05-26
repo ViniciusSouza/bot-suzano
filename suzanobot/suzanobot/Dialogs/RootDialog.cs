@@ -56,8 +56,7 @@ namespace suzanobot.Dialogs
             }
             else
             {
-                var text = "Não existem frentes no arquivo Json, contate o administrador do bot";
-                reply.Text = HttpUtility.HtmlDecode(text);
+                reply.Text = HttpUtility.HtmlDecode(Options.mensagemNaoExisteBancoFrentes);
                 await context.PostAsync(reply);
             }
 		}
@@ -77,21 +76,18 @@ namespace suzanobot.Dialogs
             var text = "";
             if (resultado.Equals("Completed"))
             {
-                text = "Obrigado por utilizar o Suzan";
+                text = Options.mensagemConversaCompletada;
             }
             else
             {
-                text = "Sinto não poder te ajudar, ainda bem que conto com um time muito bom disponível através do número/contato";
+                text = Options.mensagemConversaNaoCompletada;
 
             }
 
             var reply = context.MakeMessage();
             reply.Text = HttpUtility.HtmlDecode(text);
             await context.PostAsync(reply);
-            context.Done("");
-
-        }
-
-     
+            context.Done(string.Empty);
+        }     
 	}
 }

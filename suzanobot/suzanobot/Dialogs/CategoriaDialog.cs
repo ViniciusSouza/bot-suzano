@@ -6,6 +6,7 @@ using System.Web;
 using System.Threading.Tasks;
 using suzanobot.Services;
 using Microsoft.Bot.Connector;
+using suzanobot.Utils;
 
 namespace suzanobot.Dialogs
 {
@@ -25,7 +26,7 @@ namespace suzanobot.Dialogs
 
         public async Task StartAsync(IDialogContext context)
         {
-            string message = string.Format("Selecione a categoria referente ao tópico {0}", Frente);
+            string message = string.Format(Options.mensagemEscolhaCategoria, Frente);
 
             PromptDialog.Choice(context, ResumeAfterAnswer, Categorias, message);
         }
