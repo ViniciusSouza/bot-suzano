@@ -261,3 +261,4 @@ __pycache__/
 *.pyc
 
 appsetings.json
+/suzanobot/suzanobot/Properties/PublishProfiles/visouzavorlon - Web Deploy.pubxml
