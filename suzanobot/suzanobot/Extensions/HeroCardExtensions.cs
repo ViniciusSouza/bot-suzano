@@ -7,6 +7,11 @@ namespace suzanobot.Extensions
 {
     public static class HeroCardExtensions
     {
+        public static HeroCard AddHeroCard(string title, string subtitle, string requisitos, string observacao, string caminho)
+        {
+            return GenerateReturnHeroCard(title, subtitle, requisitos, observacao, caminho);
+        }
+
         public static void AddHeroCard<T>(this IMessageActivity message, string title, string subtitle, IEnumerable<T> options, IEnumerable<string> images = default(IEnumerable<string>))
         {
             var heroCard = GenerateHeroCard(title, subtitle, options, images);
@@ -67,7 +72,7 @@ namespace suzanobot.Extensions
         }
 
 
-        public static HeroCard GenerateReturnHeroCard(string title, string subtitle, string requisitos, string observacao, string caminho)
+        private static HeroCard GenerateReturnHeroCard(string title, string subtitle, string requisitos, string observacao, string caminho)
         {
             var actions = new List<CardAction>();
 

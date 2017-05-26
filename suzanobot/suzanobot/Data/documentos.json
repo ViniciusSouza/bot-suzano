@@ -1,0 +1,152 @@
+﻿[
+  {
+    "ID":"1",
+    "frente": "Atendimento",
+    "categoria": "Solicitação de documentos",
+    "item": "Certidão negativa de débito",
+    "requisitos": "Descrição;filial",
+    "keywords": "auditoria; autuação; Intimação; CND; Certidão",
+    "observacao": "Envio de documentos referente a regularidades para auditorias, intimação, autuação, documentação para a área florestal e CND's",
+    "caminho": "'Fiscal > Gestão de documentos > Envio de documentos fiscais"
+  },
+  {
+    "ID": "2",
+    "frente": "Atendimento",
+    "categoria": "Solicitação de documentos",
+    "item": "Comprovante de recolhimento de impostos",
+    "requisitos": "Descrição;Anexo",
+    "keywords": "Comprovante;Guia;Pagamento;pagamento de guia;recolhimento",
+    "observacao": "Envio de documentos referente a recolhimento  / pagamento de impostos",
+    "caminho": "Fiscal > Gestão de Documentos >Levantamento e envio de comprovante de recolhimento de impostos aos prestadores de serviços "
+  },
+  {
+    "ID": "3",
+    "frente": "Atendimento",
+    "categoria": "Solicitação de documentos",
+    "item": "Recibo de entrega de obrigação",
+    "requisitos": "Descrição",
+    "keywords": "Documentação;Extração de dados fiscais;relação de documentos",
+    "observacao": "Envio de documentos referente a recolhimento  / pagamento de impostos",
+    "caminho": "Fiscal > Suporte e Atendimento > Extração de dados fiscais "
+  },
+  {
+    "ID": "4",
+    "frente": "Atendimento",
+    "categoria": "Solicitação de documentos",
+    "item": "Notas fiscais emitidas pela Suzano",
+    "requisitos": "Descrição",
+    "keywords": "Documentação;Extração de dados fiscais;relação de documentos",
+    "observacao": "Envio de documentos referente a recolhimento  / pagamento de impostos",
+    "caminho": "Fiscal > Suporte e Atendimento > Extração de dados fiscais "
+  },
+  {
+    "ID": "5",
+    "frente": "Nota Fiscal",
+    "categoria": "Nota Travada",
+    "item": "emissão de guias antecipadas ",
+    "requisitos": "Descrição",
+    "keywords": "Recolhimento;Guia",
+    "observacao": "Envio de documentos referente a recolhimento  / pagamento de impostos",
+    "caminho": "Fiscal > Gestão de documentos > Análise e emissão de guias antecipadas"
+  },
+  {
+    "ID": "6",
+    "frente": "Nota Fiscal",
+    "categoria": "Nota Travada",
+    "item": "Aprovação NF",
+    "requisitos": "Número do Lançamento no SAP",
+    "keywords": "nota travada;nota fiscal recusada;Nota presas",
+    "observacao": "o campo é utilizado para analisar as notas fiscais que não foram completamente processadas e emitidas ( estão com erro ou problemas para emissão)",
+    "caminho": "Fiscal > Suporte e Atendimento > análise de processamento de NF"
+  },
+  {
+    "ID": "7",
+    "frente": "Nota Fiscal",
+    "categoria": "Nota Travada",
+    "item": "Reimpressão NF",
+    "requisitos": "Número do Lançamento no SAP",
+    "keywords": "Reimpressão de Nota Fiscal; Reimpressao NF",
+    "observacao": "O campo é utilizado para reenvio das notas fiscais que foram emitidas.",
+    "caminho": "Fiscal > Suporte e Atendimento > análise de processamento de NF"
+  },
+  {
+    "ID": "8",
+    "frente": "Nota Fiscal",
+    "categoria": "Nota Travada",
+    "item": "Recusa NF",
+    "requisitos": "Número do Lançamento no SAP",
+    "keywords": "nota travada;nota fiscal recusada",
+    "observacao": "O campo é utilizado para analisar as notas fiscais que não foram completamente processadas e emitidas ( estão com erro ou problemas para emissão)",
+    "caminho": "Fiscal > Suporte e Atendimento > análise de processamento de NF"
+  },
+  {
+    "ID": "9",
+    "frente": "Nota Fiscal",
+    "categoria": "Nota Travada",
+    "item": "Status NF",
+    "requisitos": "Número do Lançamento no SAP",
+    "keywords": "nota travada;nota em processamento;nota fiscal recusada;nota fiscal com erro;nota não emitida",
+    "observacao": "o campo é utilizado para analisar as notas fiscais que não foram completamente processadas e emitidas ( estão com erro ou problemas para emissão)",
+    "caminho": "Fiscal > Suporte e Atendimento > análise de processamento de NF"
+  },
+  {
+    "ID": "10",
+    "frente": "Nota Fiscal",
+    "categoria": "Nota Travada",
+    "item": "Status NF",
+    "requisitos": "Número da remessa ",
+    "keywords": "RECOPI;REMESSA;PAPEL IMUNE;Monitor RECOPI",
+    "observacao": "O que possibilita a consulta do documento ( vende de papel Imune) é a remessa;",
+    "caminho": "Fiscal > Suporte e Atendimento > Análise de RECOPI (registro e controle das operações com papel imune)"
+  },
+  {
+    "ID": "11",
+    "frente": "Nota Fiscal",
+    "categoria": "Cancelamento de Nota Fiscal",
+    "item": "Cancelamento Nota superior a 24 horas  ",
+    "requisitos": "Número do Lançamento no SAP",
+    "keywords": "Cancelamento;aceite de cancelamento;estornar;estorno",
+    "observacao": "Cancelamento de nota fiscal",
+    "caminho": "Fiscal > Gestão de documentos > Cancelamento de documentos fiscais e aceite de cancelamento - com mais de 24 horas "
+  },
+  {
+    "ID": "12",
+    "frente": "Nota Fiscal",
+    "categoria": "Cancelamento de Nota Fiscal",
+    "item": "Cancelamento Nota Inferior a 24 horas",
+    "requisitos": "Número do Lançamento no SAP",
+    "keywords": "Cancelamento;aceite de cancelamento;estornar;estorno",
+    "observacao": "Cancelamento de nota fiscal",
+    "caminho": "Fiscal > Gestão de documentos > Cancelamento de documentos fiscais e aceite de cancelamento - com menos de 24 horas  "
+  },
+  {
+    "ID": "13",
+    "frente": "Outros",
+    "categoria": "Cadastro de Cliente/fornecedor",
+    "item": "Liberação cadastro cliente",
+    "requisitos": "Número do cliente no SAP;Descrição",
+    "keywords": "Liberação de cadastro",
+    "observacao": "Análise e liberação do cadastro de cliente",
+    "caminho": "Fiscal > Cadastros > Análise e liberação de cadastro de cliente"
+  },
+  {
+    "ID": "14",
+    "frente": "Outros",
+    "categoria": "Cadastro de Cliente/fornecedor",
+    "item": "Ajuste cadastro cliente",
+    "requisitos": "Número do cliente no SAP;Descrição",
+    "keywords": "Alíquota; Imposto",
+    "observacao": "Análise e alteração da tabela de alíquotas  para Emissão de Notas Fiscais",
+    "caminho": "Fiscal > Análise Tributária > Análise  de nova  / alteração de legislação"
+  },
+  {
+    "ID": "15",
+    "frente": "Outros",
+    "categoria": "Solicitação de Informação",
+    "item": "Informações unidades Suzano",
+    "requisitos": "Descrição",
+    "keywords": "'Documentação;Extração de dados fiscais;relação de documentos; Endereço Unidade; CNPJ;Inscrição estadual;ie",
+    "observacao": "Disponibilização da relação de documentos/ relatórios referente a uma filial em específico ou municipio/ estado, dados cadastrais das unidades e etc.",
+    "caminho": "Fiscal > Suporte e Atendimento > Extração de dados fiscais"
+  }
+]

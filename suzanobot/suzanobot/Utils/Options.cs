@@ -48,14 +48,15 @@ namespace suzanobot.Utils
 			"Cancelamento de nota fiscal"
 		};
 
-		public static string[] optionsSolicitacaoPagamentoNF = new[]
+		public static string[] optionsDuvidaNF = new[]
 		{
 			"Tributação",
 			"Alíquota",
 			"Ajuste cadastro cliente/fornecedor",
 			"Informações para solicitação de pagamento",
 			"Emissão NF Complementar",
-			"Emissão NF Importação"
+			"Emissão NF Importação",
+            "Emissão de guias antecipadas"
 		};
 
 		public static string[] optionsTravadaSAPNF = new[]

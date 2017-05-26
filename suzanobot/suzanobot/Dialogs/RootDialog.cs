@@ -5,6 +5,9 @@ using System;
 using System.Threading.Tasks;
 using System.Web;
 using suzanobot.Utils;
+using System.Collections.Generic;
+using suzanobot.Model;
+using suzanobot.Services;
 
 namespace suzanobot.Dialogs
 {
@@ -13,8 +16,13 @@ namespace suzanobot.Dialogs
 	{
 		private ResumptionCookie resumptionCookie;
 
-		public Task StartAsync(IDialogContext context)
+        public string Frente { get; set; }
+        public string Categoria { get; set; }
+
+        public Task StartAsync(IDialogContext context)
 		{
+            Database.LoadJson();
+
 			context.Wait(MessageReceivedAsync);
 
 			return Task.CompletedTask;
@@ -38,51 +46,52 @@ namespace suzanobot.Dialogs
 			var reply = context.MakeMessage();
 			UriBuilder uri = Utils.Utils.GetPlaceHoldImg(56, 640, 330, Options.nomeBot);
 
-			reply.AddHeroCard(Options.tituloOpcaoInicial, Options.descricaoOpcaoInicial, Options.initialOptions, new[] { uri.ToString() });
+            var frentes = Database.GetFrentes().ToArray();
 
-			await context.PostAsync(reply);
-
-			context.Wait(this.OnOptionSelected);
+            if (frentes != null && frentes.Length > 0)
+            {
+                reply.AddHeroCard(Options.tituloOpcaoInicial, Options.descricaoOpcaoInicial, frentes, new[] { uri.ToString() });
+                await context.PostAsync(reply);
+                context.Wait(this.onFrenteSelected);
+            }
+            else
+            {
+                var text = "Não existem frentes no arquivo Json, contate o administrador do bot";
+                reply.Text = HttpUtility.HtmlDecode(text);
+                await context.PostAsync(reply);
+            }
 		}
 
-		private async Task OnOptionSelected(IDialogContext context, IAwaitable<IMessageActivity> result)
-		{
-			var message = await result;
-			var text = "";
+        private async Task onFrenteSelected(IDialogContext context, IAwaitable<IMessageActivity> result)
+        {
+            var message = await result;
+            Frente = message.Text;
+            var dialog = new CategoriaDialog(Frente);
+            context.Call(dialog, CategoriaReplayMessage);
+        }
 
-			if (message.Text == Options.initialOptions[0])
-			{
-				var dialog = new NotaFiscalDialog();
-				context.Call(dialog, NotaFiscalReplayMessage);
-			}
-			else if (message.Text == Options.initialOptions[1])
-			{
-				var dialog = new AtendimentoDialog();
-				context.Call(dialog, AtendimentoReplayMessage);
-			}
-			else if (message.Text == Options.initialOptions[2])
-			{
-				var dialog = new OutrosDialog();
-				context.Call(dialog, OutrosReplayMessage);
-			}
+        private async Task CategoriaReplayMessage(IDialogContext context, IAwaitable<string> result)
+        {
+            var resultado = await result;
 
-			var reply = context.MakeMessage();
-			reply.Text = HttpUtility.HtmlDecode(text);
-			await context.PostAsync(reply);
-		}
+            var text = "";
+            if (resultado.Equals("Completed"))
+            {
+                text = "Obrigado por utilizar o Suzan";
+            }
+            else
+            {
+                text = "Sinto não poder te ajudar, ainda bem que conto com um time muito bom disponível através do número/contato";
 
-		private async Task NotaFiscalReplayMessage(IDialogContext context, IAwaitable<object> result)
-		{
-			context.Done(string.Empty);
-		}
+            }
 
-		private async Task AtendimentoReplayMessage(IDialogContext context, IAwaitable<object> result)
-		{
-			context.Done(string.Empty);
-		}
-		private async Task OutrosReplayMessage(IDialogContext context, IAwaitable<object> result)
-		{
-			context.Done(string.Empty);
-		}
+            var reply = context.MakeMessage();
+            reply.Text = HttpUtility.HtmlDecode(text);
+            await context.PostAsync(reply);
+            context.Done("");
+
+        }
+
+     
 	}
 }

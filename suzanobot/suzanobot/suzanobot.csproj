@@ -122,9 +122,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Dialogs\AtendimentoDialog.cs" />
-    <Compile Include="Dialogs\ItemSearchDialog.cs" />
-    <Compile Include="Dialogs\OutrosDialog.cs" />
-    <Compile Include="Dialogs\NotaFiscalDialog.cs" />
+    <Compile Include="Dialogs\ItemDialog.cs" />
+    <Compile Include="Dialogs\CategoriaDialog.cs" />
     <Compile Include="Dialogs\RootDialog.cs" />
     <Compile Include="Extensions\HeroCardExtensions.cs" />
     <Compile Include="Global.asax.cs">
@@ -133,6 +132,7 @@
     <Compile Include="Model\Documento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AzureSearchClient.cs" />
+    <Compile Include="Services\Database.cs" />
     <Compile Include="Services\IMapper.cs" />
     <Compile Include="Utils\Options.cs" />
     <Compile Include="Utils\Utils.cs" />
@@ -142,6 +142,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="appsetings.json" />
+    <Content Include="Data\documentos.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -17,9 +17,9 @@ namespace suzanobot.Model
         public IDictionary<string, object> PropertyBag { get; set; }
 
         public string ID { get; set; }
+        public string Frente { get; set; }
         public string Categoria { get; set; }
         public string Item { get; set; }
-        public string Pergunta { get; set; }
         public string Requisitos { get; set; }
         public string Keywords { get; set; }
         public string Observacao { get; set; }
