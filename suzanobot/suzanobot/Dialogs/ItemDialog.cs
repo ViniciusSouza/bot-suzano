@@ -76,7 +76,7 @@ namespace suzanobot.Dialogs
                 string text = "";
                 text = text + string.Format("## {0} ## <br />", documento.Frente);
                 text = text + string.Format("### {0} ### <br />", documento.Categoria);
-                text = text + string.Format("**Requisitos:** {0} <br />", documento.Requisitos.Replace(";", "<br />"));
+                text = text + string.Format("**Requisitos:** {0} <br /><br />", documento.Requisitos.Replace(";", "<br />"));
                 text = text + string.Format("**Observação:** {0} <br />", documento.Observacao);
                 text = text + string.Format("**Caminho no CSC:** {0} <br />", documento.Breadcrumb);
 

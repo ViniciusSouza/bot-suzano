@@ -5,7 +5,7 @@
     "categoria": "Solicitação de documentos",
     "item": "Certidão negativa de débito",
     "requisitos": "Descrição;filial",
-    "keywords": "auditoria; autuação; Intimação; CND; Certidão",
+    "keywords": "Auditoria; autuação; Intimação; CND; Certidão",
     "observacao": "Envio de documentos referente a regularidades para auditorias, intimação, autuação, documentação para a área florestal e CND's",
     "caminho": "'Fiscal > Gestão de documentos > Envio de documentos fiscais"
   },
@@ -17,7 +17,7 @@
     "requisitos": "Descrição;Anexo",
     "keywords": "Comprovante;Guia;Pagamento;pagamento de guia;recolhimento",
     "observacao": "Envio de documentos referente a recolhimento  / pagamento de impostos",
-    "caminho": "Fiscal > Gestão de Documentos >Levantamento e envio de comprovante de recolhimento de impostos aos prestadores de serviços "
+    "caminho": "Fiscal > Gestão de Documentos > Levantamento e envio de comprovante de recolhimento de impostos aos prestadores de serviços "
   },
   {
     "ID": "3",
@@ -43,7 +43,7 @@
     "ID": "5",
     "frente": "Nota Fiscal",
     "categoria": "Nota Travada",
-    "item": "emissão de guias antecipadas ",
+    "item": "Emissão de guias antecipadas ",
     "requisitos": "Descrição",
     "keywords": "Recolhimento;Guia",
     "observacao": "Envio de documentos referente a recolhimento  / pagamento de impostos",
@@ -53,47 +53,47 @@
     "ID": "6",
     "frente": "Nota Fiscal",
     "categoria": "Nota Travada",
-    "item": "Aprovação NF",
+    "item": "Aprovação Nota Fiscal",
     "requisitos": "Número do Lançamento no SAP",
-    "keywords": "nota travada;nota fiscal recusada;Nota presas",
+    "keywords": "Nota travada;nota fiscal recusada;Nota presas",
     "observacao": "o campo é utilizado para analisar as notas fiscais que não foram completamente processadas e emitidas ( estão com erro ou problemas para emissão)",
-    "caminho": "Fiscal > Suporte e Atendimento > análise de processamento de NF"
+    "caminho": "Fiscal > Suporte e Atendimento > análise de processamento de Nota Fiscal"
   },
   {
     "ID": "7",
     "frente": "Nota Fiscal",
     "categoria": "Nota Travada",
-    "item": "Reimpressão NF",
+    "item": "Reimpressão Nota Fiscal",
     "requisitos": "Número do Lançamento no SAP",
-    "keywords": "Reimpressão de Nota Fiscal; Reimpressao NF",
+    "keywords": "Reimpressão de Nota Fiscal; Reimpressao Nota Fiscal",
     "observacao": "O campo é utilizado para reenvio das notas fiscais que foram emitidas.",
-    "caminho": "Fiscal > Suporte e Atendimento > análise de processamento de NF"
+    "caminho": "Fiscal > Suporte e Atendimento > análise de processamento de Nota Fiscal"
   },
   {
     "ID": "8",
     "frente": "Nota Fiscal",
     "categoria": "Nota Travada",
-    "item": "Recusa NF",
+    "item": "Recusa Nota Fiscal",
     "requisitos": "Número do Lançamento no SAP",
-    "keywords": "nota travada;nota fiscal recusada",
+    "keywords": "Nota travada;nota fiscal recusada",
     "observacao": "O campo é utilizado para analisar as notas fiscais que não foram completamente processadas e emitidas ( estão com erro ou problemas para emissão)",
-    "caminho": "Fiscal > Suporte e Atendimento > análise de processamento de NF"
+    "caminho": "Fiscal > Suporte e Atendimento > análise de processamento de Nota Fiscal"
   },
   {
     "ID": "9",
     "frente": "Nota Fiscal",
     "categoria": "Nota Travada",
-    "item": "Status NF",
+    "item": "Status Nota Fiscal",
     "requisitos": "Número do Lançamento no SAP",
     "keywords": "nota travada;nota em processamento;nota fiscal recusada;nota fiscal com erro;nota não emitida",
     "observacao": "o campo é utilizado para analisar as notas fiscais que não foram completamente processadas e emitidas ( estão com erro ou problemas para emissão)",
-    "caminho": "Fiscal > Suporte e Atendimento > análise de processamento de NF"
+    "caminho": "Fiscal > Suporte e Atendimento > análise de processamento de Nota Fiscal"
   },
   {
     "ID": "10",
     "frente": "Nota Fiscal",
     "categoria": "Nota Travada",
-    "item": "Status NF",
+    "item": "Status Nota Fiscal",
     "requisitos": "Número da remessa ",
     "keywords": "RECOPI;REMESSA;PAPEL IMUNE;Monitor RECOPI",
     "observacao": "O que possibilita a consulta do documento ( vende de papel Imune) é a remessa;",
@@ -136,7 +136,7 @@
     "item": "Ajuste cadastro cliente",
     "requisitos": "Número do cliente no SAP;Descrição",
     "keywords": "Alíquota; Imposto",
-    "observacao": "Análise e alteração da tabela de alíquotas  para Emissão de Notas Fiscais",
+    "observacao": "Análise e alteração da tabela de alíquotas para emissão de Notas Fiscais",
     "caminho": "Fiscal > Análise Tributária > Análise  de nova  / alteração de legislação"
   },
   {
