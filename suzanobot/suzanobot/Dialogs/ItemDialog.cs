@@ -36,17 +36,28 @@ namespace suzanobot.Dialogs
 			reply.TextFormat = TextFormatTypes.Markdown;
 			reply.Text = message;
 
-			var actions = new List<CardAction>();
+            var actions = new List<CardAction>();
+            String[] buttons = new String[Itens.Count];
+            int idx = 0;
 
-			foreach (var item in Itens)
-			{
-				actions.Add(new CardAction() { Title = item.Value, Value = string.Format("{0} - {1}", item.Key, item.Value) });
-			}
+            foreach (var item in Itens)
+            {
+                actions.Add(new CardAction() { Title = item.Value, Value = string.Format("{0} - {1}", item.Key, item.Value) });
+                buttons[idx] = string.Format("{0} - {1}", item.Key, item.Value);
+            }
 
-			reply.SuggestedActions = new SuggestedActions()
-			{
-				Actions = actions
-			};
+            if (context.Activity.ChannelId.IndexOf("web") != -1)
+            {
+                reply.SuggestedActions = new SuggestedActions()
+                {
+                    Actions = actions
+                };
+            }
+            else
+            {
+                reply.AddHeroCard(message, "", buttons);
+            }
+
 			await context.PostAsync(reply);
 			context.Wait(ItemSelected);
 
@@ -74,12 +85,25 @@ namespace suzanobot.Dialogs
                 //var herocard = HeroCardExtensions.AddHeroCard(documento.Frente, documento.Categoria, documento.Requisitos, documento.Observacao, documento.Breadcrumb);
                 //reply.Attachments.Add(herocard.ToAttachment());
 
+
                 string text = "";
-                text = text + string.Format("## {0} ## <br />", documento.Frente);
-                text = text + string.Format("### {0} ### <br />", documento.Categoria);
-                text = text + string.Format("**Requisitos:** {0} <br /><br />", documento.Requisitos.Replace(";", "<br />"));
-                text = text + string.Format("**Observação:** {0} <br />", documento.Observacao);
-                text = text + string.Format("**Caminho no CSC:** {0} <br />", documento.Breadcrumb);
+
+                if (context.Activity.ChannelId.IndexOf("web") != -1)
+                {
+                    text = text + string.Format("## {0} ## <br />", documento.Frente);
+                    text = text + string.Format("### {0} ### <br />", documento.Categoria);
+                    text = text + string.Format("**Requisitos:** {0} <br /><br />", documento.Requisitos.Replace(";", "<br />"));
+                    text = text + string.Format("**Observação:** {0} <br />", documento.Observacao);
+                    text = text + string.Format("**Caminho no CSC:** {0} <br />", documento.Breadcrumb);
+                }
+                else
+                {
+                    text = text + string.Format("# {0} # <br />", documento.Frente);
+                    text = text + string.Format("**{0}**<br />", documento.Categoria);
+                    text = text + string.Format("**Requisitos:** {0} <br /><br />", documento.Requisitos.Replace(";", "<br />"));
+                    text = text + string.Format("**Observação:** {0} <br />", documento.Observacao);
+                    text = text + string.Format("**Caminho no CSC:** {0} <br />", documento.Breadcrumb);
+                }
 
 				reply.Text = text;
 
