@@ -1,21 +1,6 @@
----
-layout: post
-title:  "Suzano: Internal Shared Services Bot"
-author: "Cynthia Zanoni"
-author-link: "https://twitter.com/cynthiazanoni"
-#author-image: "{{ site.baseurl }}/images/authors/photo.jpg"
-date:   2016-05-19
-categories: [Bot Framework]
-color: "blue"
-#image: "{{ site.baseurl }}/images/imagename.png" #should be ~350px tall
-excerpt: Suzano is the second largest eucalyptus pulp company in the world and one of the ten largest paper companies in the world. In this article, we show the process for development a FAQ bot for help users to use an management system of company.
-language: [English]
-verticals: [Other]
----
-
 Suzano is the second largest eucalyptus pulp company in the world and one of the ten largest paper companies in the world. The company has a department called CSC, which stands for Central de Serviços Compartilhados (Shared Services Central). This area is responsible for handling several kinds of internal administrative and financial demands, such as processing invoices, purchases and loans, requesting equipment transfer and so forth.
 
-The main problem is support all doubts of users, because the same process can be util for any areas, but the resolutions is different and in lot of situations the users don't know how identify the best path to solve. This leads employees to call CSC to clarify their doubts and questions, which floods the CSC staff with repetitive queries. 
+The main problem is support all doubts of users, because the same process can be util for any areas, but the resolutions is different and in lot of situations the users don't know how identify the best path to solve. This leads employees to call CSC to clarify their doubts and questions, which floods the CSC staff with repetitive queries.
 
 During hackfest, we built Suzan, a bot in the FAQ style, integrated with Sharepoint thrue Rest API. The choice for Sharepoint is based in common technology used at Suzano and provides agility in creating an area for easy content management for users.
 
